@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="RegisterBinding">
+
+        <import type="com.love.resthome.loveresthome.bean.UserBean" />
+
+        <variable
+            name="userBean"
+            type="UserBean" />
+
+        <import type="com.love.resthome.loveresthome.handler.RegisterHandler" />
+
+        <variable
+            name="registerHandler"
+            type="RegisterHandler" />
+
+    </data>
+
+    <!--注册界面-->
+    <!--这里的布局放置是： 1 个 ImageView 控件，用于显示用户头像；3 个 EditText 控件，用于输入用户名、密码、再次输入密码；1 个 Button 控件为注册按钮-->
+    <LinearLayout
+        android:id="@+id/activity_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/register_bg"
+        android:orientation="vertical">
+        <!--<include layout="@layout/main_title_bar"></include>&lt;!&ndash;引入标题栏;-->
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/profle" />
+        <!--三个编辑框-->
+        <EditText
+            android:id="@+id/et_user_name"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="35dp"
+            android:drawableLeft="@drawable/user_name_icon"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="请输入用户名"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:text="@={userBean.userName}"
+            android:textColor="#000000"
+            android:textColorHint="#a3a3a3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_psw"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:drawableLeft="@drawable/psw_icon"
+            android:drawablePadding="10dp"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#a3a3a3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_psw_again"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:drawableLeft="@drawable/psw_icon"
+            android:drawablePadding="10dp"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#a3a3a3"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/register_selector"
+            android:onClick="@{()->registerHandler.register(userBean)}"
+            android:text="注 册"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</layout>
