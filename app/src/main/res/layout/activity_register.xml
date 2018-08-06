@@ -44,7 +44,7 @@
             android:drawableLeft="@drawable/user_name_icon"
             android:drawablePadding="10dp"
             android:gravity="center_vertical"
-            android:hint="请输入用户名"
+            android:hint="请输入姓名"
             android:paddingLeft="8dp"
             android:singleLine="true"
             android:text="@={userBean.userName}"

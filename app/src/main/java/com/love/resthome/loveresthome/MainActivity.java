@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.love.resthome.loveresthome.activity.LoginActivity;
 import com.love.resthome.loveresthome.activity.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
         tv_hw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(MainActivity.this, RegisterActivity.class);
+                //Intent it = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent it = new Intent(MainActivity.this, LoginActivity.class);
+
                 startActivity(it);
             }
         });

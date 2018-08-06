@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LoveRestHome</string>
+
+
+    <string name="link_text_auto">已有帐号?<u>立即登录</u></string>
+
+
 </resources>

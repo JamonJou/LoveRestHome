@@ -15,7 +15,7 @@ public class RegisterHandler {
     public void register(UserBean user) {
         Log.i(TAG, "RegisterHandler->register");
         Toast.makeText(MyApplication.getInstance(), "register ok! " + user.getUserName(), Toast.LENGTH_LONG).show();
-        if (TextUtils.isEmpty(user.getUserName()) {
+        if (TextUtils.isEmpty(user.getUserName())) {
             Toast.makeText(MyApplication.getInstance(), "请输入用户名", Toast.LENGTH_SHORT).show();
         }
     }

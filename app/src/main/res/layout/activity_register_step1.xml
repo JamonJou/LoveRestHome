@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/activity_register_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:text="手机号*"></TextView>
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColorHint="#a3a3a3"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_register_imagecode"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_image_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:hint="请输入验证码"
+            android:paddingLeft="8dp"
+            android:singleLine="true"></EditText>
+
+        <ImageView
+            android:id="@+id/image_code_random"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_register_numbercode"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_number_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="请输入短信验证码"
+            android:paddingLeft="8dp"
+            android:singleLine="true"></EditText>
+
+        <Button
+            android:id="@+id/btn_number_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发送验证码"></Button>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_register_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="下一步"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:autoLink="all"
+        android:gravity="center_vertical"
+        android:text="@string/link_text_auto"></TextView>
+
+
+</LinearLayout>
